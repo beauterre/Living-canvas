@@ -1,244 +1,443 @@
 # Living Canvas
+### Generative art. Human collaboration. Verifiable evolution.
 
-**Generative art. Human collaboration. Verifiable evolution.**
+Living Canvas is a collaborative art platform exploring how generative systems, collective creativity, and social consensus shape the creation and perceived value of physical art.
 
-Living Canvas is a collaborative art platform where a mathematical image becomes a physical painting through successive human contributions.
+Each artwork begins as a mathematically generated image. People then work together to reproduce it through successive physical layers of paint. The platform documents the process, measures progress toward the target, and builds a historical record of the artwork's evolution.
 
-An artist chooses a title. A deterministic algorithm generates a unique image. Participants then build a physical version of that image, one layer at a time, guided by an adaptive algorithm that measures progress toward the hidden target.
+The result is more than a painting. It is a physical object with a reproducible digital identity, a history of human contributions, and a record of the social and economic events surrounding it.
 
-Each contribution becomes part of the artwork's history. Progress is measurable, the rules are transparent, and anyone can join the creative process.
+Living Canvas does not sell artworks or operate an internal marketplace. Buying, selling, trading, and auctioning take place independently of the platform, between participants or through external marketplaces.
 
-## The concept
+The platform provides the creative protocol, collaboration infrastructure, artwork metadata, progress measurements, and historical price visualizations that allow people to explore the relationship between art, community, and economic value.
 
-What if people could collectively create a painting without knowing exactly what the final image would look like?
+---
 
-Living Canvas combines three elements:
+## 1. The Core Idea
 
-* **Generative art:** mathematical patterns created from a title and reproducible algorithm.
-* **Human participation:** people choose colors and physically apply successive layers.
-* **Algorithmic guidance:** each new layer is determined by the actual state of the painting and its distance from the target.
+An artwork can be understood through several overlapping dimensions:
 
-The artwork is both a physical object and a record of its own creation.
+- **Generative identity:** the mathematical process that defines the target image.
+- **Physical realization:** the paint, materials, and accumulated layers of the canvas.
+- **Collective authorship:** the people who contribute to its creation.
+- **Algorithmic progress:** the measured relationship between the physical painting and its target.
+- **Social history:** the groups, communities, and relationships formed around the work.
+- **Market history:** the offers, auctions, transactions, and ownership changes associated with it.
 
-## How it works
+Living Canvas brings these dimensions together in a single documented system.
 
-### 1. Choose a title
+The project explores a broader question:
 
-An artist enters a title for a new painting.
+**How much of an artwork's value comes from the image itself, how much from the people who create it, and how much from the history that develops around it?**
 
-The title is used to generate a deterministic seed. A generative algorithm uses that seed, together with its version and parameters, to produce a mathematical image.
+## 2. Generative Identity
 
-The artist previews the result and selects a canvas aspect ratio.
+Every artwork begins with a title chosen by a participant.
 
-### 2. Commit the target
+The title is converted into a deterministic seed that drives a generative image process. The generator produces a target image using mathematical rules, parameters, and a defined version of the generation algorithm.
 
-Before painting begins, the system records the selected target image and its generation metadata.
+The same title and generation configuration produce the same target.
 
-The target remains hidden from participants if the project calls for a surprise reveal.
+Each artwork records the information necessary to reproduce its digital identity, including:
 
-The target cannot be silently changed after the painting starts.
+- Artwork title
+- Seed or seed-generation method
+- Generator version
+- Generation parameters
+- Target image or its cryptographic hash
+- Canvas aspect ratio
+- Creation timestamp
 
-### 3. Start the physical painting
+The image provides the technical starting point. The title provides a human point of reference, allowing meaning and interpretation to emerge through the creative process.
 
-The first participant prepares a canvas with the selected aspect ratio.
+The generative system can use mathematical functions, procedural patterns, fractals, noise fields, and other deterministic techniques to produce aesthetically interesting images.
 
-The system generates instructions for the first layer, including a color, region, coverage, and application technique.
+The aim is not simply to create random pictures. It is to create a reproducible visual identity that can be interpreted, realized, and transformed through human collaboration.
 
-The participant applies the paint using a sponge or another supported tool.
+## 3. From Digital Image to Physical Canvas
 
-### 4. Photograph and measure
+The artist selects a canvas format and commits to the target image before the collaborative painting process begins.
 
-After each layer, the participant photographs the canvas.
+The target remains hidden from participants during the process, encouraging them to work through instructions and shared coordination rather than simply copying a visible reference.
 
-The system corrects for perspective and lighting where possible, compares the current canvas with the target, and calculates a progress score.
+The canvas is built through successive layers of paint. Participants may apply color with sponges, rollers, brushes, or other defined techniques.
 
-The algorithm uses the observed result rather than assuming the participant followed the instructions perfectly.
+After each layer:
 
-### 5. Generate the next layer
+1. The physical canvas is photographed.
+2. The photograph is aligned and normalized as far as the capture setup allows.
+3. The system compares the observed painting with the target image.
+4. The current progress score is calculated.
+5. The system generates instructions for the next layer.
+6. The new layer and its measurements are added to the artwork's history.
 
-The system adapts its instructions to the current state of the painting.
+The process repeats until the collective reaches its chosen completion criteria.
 
-Each new contribution moves the physical artwork toward its target while preserving the unpredictable variations introduced by human hands.
+The physical painting is the artwork. The digital record documents its evolution.
 
-### 6. Reveal the result
+### Image Capture
 
-After the chosen number of layers, the target image can be revealed alongside the completed painting.
+Reliable comparisons require consistent image capture.
 
-The original target, intermediate photographs, instructions, and contributor history document how the final work emerged.
+Where possible, the process should use:
 
-## The pricing mechanism
+- A fixed camera position
+- Perspective correction
+- Consistent lighting
+- Color calibration
+- Known canvas dimensions
+- Reference color markers where appropriate
 
-Each stage can receive a protocol price calculated from a published formula.
+These measures help distinguish genuine changes in the painting from differences caused by camera position, exposure, or lighting.
 
-For example:
+## 4. Measuring Progress
 
-```
-protocol_price = base_price + progress_multiplier * progress_score
-```
+Living Canvas uses image analysis to estimate how closely the physical painting corresponds to its generative target.
 
-A production implementation would use a defined scoring method and pricing schedule, potentially accounting for regional accuracy, measurement uncertainty, and the remaining difference between the canvas and the target.
+The measurement system may consider:
 
-The formula is fixed in advance and can be independently reproduced.
+- Color distribution
+- Spatial composition
+- Large-scale shapes
+- Regional similarity
+- Layer coverage
+- Image structure at multiple scales
 
-Three concepts must remain distinct:
+A single similarity metric may not adequately capture artistic progress. The scoring system should therefore be versioned, documented, and designed to avoid rewarding superficial changes that increase numerical similarity without improving the overall composition.
 
-* **Progress score:** how closely the canvas matches the target under the published measurement method.
-* **Protocol price:** the price calculated under the project's rules.
-* **Market price:** what an actual buyer is willing to pay.
+Each recorded score represents a measurement under a particular protocol, not an objective judgment of artistic quality.
 
-A higher progress score can produce a higher protocol price, but it does not guarantee a higher resale price or a financial return.
+Progress is a measurable property of the painting relative to its target. Artistic merit remains open to interpretation.
 
-## Generative identity
+## 5. Protocol Price
 
-The title gives each artwork its human identity. The committed target provides its technical reference.
+Living Canvas can calculate a protocol price from a published algorithm.
 
-Each artwork should record:
+The calculation may combine a base value with the measured progress of the painting:
 
-* Title.
-* Generator name and version.
-* Seed-generation method.
-* Canvas aspect ratio.
-* Generation parameters.
-* Target image hash.
-* Date the target was committed.
+`Protocol Price = Base Value + Progress Component`
 
-A cryptographic hash does not generate the image itself. It helps verify that the selected target has not changed.
+The actual formula, parameters, and version are recorded with the artwork.
 
-The generator must be deterministic: identical inputs and the same algorithm version should produce the same target.
+The protocol price is a system-defined metric. It is not a sale offer, an independent appraisal, or a guarantee of future market value.
 
-## Human meaning
+The distinction is fundamental:
 
-The algorithm creates mathematical structure, but people give the image meaning.
+- **Progress score** measures similarity to the target under the defined scoring protocol.
+- **Protocol price** expresses the output of the platform's pricing formula.
+- **Asking price** is the price a seller requests.
+- **Bid price** is an amount offered by a prospective buyer.
+- **Completed sale price** is the amount paid in a completed transaction.
 
-A title such as "Electric Garden" might evoke flowers, circuitry, neural networks, or an imaginary landscape. Different people can interpret the same pattern differently.
+These figures describe different things and should never be presented as interchangeable.
 
-The first artist establishes an intention. Subsequent participants contribute their own choices, creating a physical record of collective interpretation.
+The algorithm measures progress according to its own rules, while buyers and sellers outside the platform determine what they are willing to pay.
 
-The final painting is the result of the relationship between mathematical structure and human participation.
+## 6. Collective Creation
 
-## Groups and collaboration
+Living Canvas supports groups of people working together on the same artwork.
 
-Members can join groups organized around shared interests, artistic styles, or specific projects.
+Participants can organize into collectives, coordinate early layers, share responsibilities, and develop their own creative methods.
 
-Groups can:
+A group might agree on the first six layers, divide tasks between members, or establish a shared approach to completing a canvas.
 
-* Start new paintings.
-* Coordinate early contributions.
-* Invite additional participants.
-* Document collective authorship.
-* Share and transfer eligible artworks.
-* Build portfolios and reputations.
+The platform records contributions and collaboration without requiring every artistic decision to be made by an algorithm.
 
-The first six layers of a painting, for example, could be coordinated by a founding group before the project opens to a wider community.
+Groups can develop their own identities, working methods, and reputations. Members can also build portfolios showing their participation in different works.
 
-Early members have more opportunities to establish projects, build reputations, and shape the platform's culture. These opportunities do not guarantee financial appreciation.
+The platform provides the coordination infrastructure; the collective determines how it uses that infrastructure.
 
-Ownership rules must clearly distinguish between the physical canvas, the completed artwork, and any separately defined shares or stages.
+### Collective Ownership and Participation
 
-## Marketplace
+Depending on the arrangements chosen by participants, a group may coordinate the creation of a painting before deciding who will own it or how it will be transferred.
 
-Members can buy and sell eligible artworks through the platform.
+The platform can document contributions, agreements, and ownership information where participants choose to provide them.
 
-An artwork listing can display:
+Participation in the creation of a work does not automatically establish legal ownership. Ownership and transfer arrangements remain subject to the agreements and applicable laws governing the participants.
 
-* Title and generated preview.
-* Current canvas photograph.
-* Target image identifier.
-* Progress score.
-* Protocol price.
-* Contribution history.
-* Ownership and transfer history.
-* Actual completed sale prices.
+## 7. External Trading and Auctions
 
-Auctions may be used to discover market demand.
+Living Canvas does not operate an internal shop and does not sell artworks on behalf of participants.
 
-Transactions between related members must be represented accurately. Internal transactions can document an artwork's history, but they should not be presented as independent market validation when they are not.
+Participants remain free to arrange sales, purchases, exchanges, or auctions independently, whether directly with one another or through external marketplaces.
 
-The protocol price is a feature of the artwork's rules, not proof of its independent market value.
+They may use bulletin boards or other external channels to advertise works and communicate offers. Artwork identifiers and provenance records help connect those activities to the corresponding canvas.
 
-## Subscription model
+Auctions can provide a mechanism for price discovery when participants choose to use them. The platform does not need to conduct the auction or guarantee its outcome.
 
-Living Canvas is designed around recurring membership.
+This separation is intentional:
 
-Potential subscription features include:
+- The platform defines and documents the artwork.
+- Participants determine how they organize and collaborate.
+- Buyers and sellers make their own economic decisions.
+- External markets determine whether a work attracts demand and at what price.
 
-* Creating and previewing generated images.
-* Starting and managing paintings.
-* Joining groups and coordinating contributions.
-* Tracking progress and provenance.
-* Accessing marketplace tools.
-* Using advanced generation and analysis features.
+The platform does not need to incentivize trading to study the effects of trading.
 
-Additional revenue could come from transaction fees, premium features, and gallery partnerships.
+### Bulletin Boards
 
-The subscription funds the platform and its community rather than relying entirely on the resale of artworks.
+External bulletin boards can allow participants to announce that a work is available, state an asking price, invite offers, or propose a trade.
 
-## Transparency and verification
+A bulletin-board listing is not itself a transaction. Listings may be withdrawn, offers may be rejected, and asking prices may differ substantially from eventual sale prices.
 
-The system should make its rules and records inspectable.
+Where market events are added to an artwork's history, their status should be made explicit.
 
-Core principles:
+### Auctions
 
-* The target is committed before painting begins.
-* The generation algorithm is versioned.
-* The progress-scoring method is published.
-* Each layer is documented.
-* Protocol prices are reproducible.
-* Actual sale prices are distinguished from calculated prices.
-* Ownership and transfer rules are explicit.
-* Financial appreciation is never guaranteed.
+An external auction can produce a sequence of bids and, potentially, a completed sale.
 
-Anyone should be able to photograph a canvas and compare it with the target using the published procedure. Exact results may vary because of lighting, camera calibration, paint opacity, gloss, and other physical factors. The system should disclose those limitations and define acceptable measurement tolerances.
+Useful auction metadata includes:
 
-## Technical roadmap
+- Opening price
+- Auction start and end times
+- Recorded bids
+- Winning bid
+- Whether the sale was completed
+- Final transaction price, if verified
+- Relevant fees and disclosed relationships
 
-### Phase 1: Generative engine
+A winning bid should not automatically be treated as a completed sale. The record should distinguish between an auction outcome and a transaction that actually occurred.
 
-* Implement deterministic image generation.
-* Support titles, seeds, parameters, and aspect ratios.
-* Build a preview interface.
-* Commit target images and metadata.
+## 8. Price History and Investment Discovery
 
-### Phase 2: Physical painting prototype
+Each artwork has a time-versus-euro price-history graph.
 
-* Define a constrained color palette.
-* Generate initial layer instructions.
-* Test sponge-based application.
-* Document each layer photographically.
+The horizontal axis represents time. The vertical axis represents price in euros.
 
-### Phase 3: Progress measurement
+The graph helps visitors explore how the recorded prices associated with a painting have changed throughout its history and identify works they may find interesting as potential investments.
 
-* Implement perspective correction.
-* Calibrate color measurements.
-* Compare canvas photographs with target images.
-* Calculate progress scores.
-* Test robustness against lighting and application variation.
+The purpose is to make the economic history of each artwork easy to inspect and compare.
 
-### Phase 4: Adaptive guidance
+### Price Data
 
-* Generate instructions from the current canvas state.
-* Test how layer opacity affects image recovery.
-* Evaluate different scoring and correction strategies.
-* Develop the protocol pricing formula.
+Depending on the available records, a graph may include:
 
-### Phase 5: Community
+- Protocol prices calculated by the Living Canvas algorithm
+- Recorded asking prices
+- Auction bids and winning bids
+- Completed sale prices
+- Relevant ownership and transaction events
 
-* Add member profiles.
-* Create groups and projects.
-* Record contributions and ownership.
-* Introduce subscription features.
+These values should be visually and semantically distinguished.
 
-### Phase 6: Marketplace
+For example, the graph might show the protocol price as one series, asking prices as separate markers, bids as auction events, and completed sales as prominent transaction points.
 
-* Add listings and completed transaction records.
-* Support eligible transfers and auctions.
-* Distinguish protocol prices from actual sale prices.
-* Test the platform with independent collectors.
+The graph should not connect unrelated values in a way that implies they represent a continuous series of actual market transactions.
 
-## Guiding principle
+### Discovering Interesting Works
 
-Living Canvas turns painting into a collaborative, measurable process.
+Visitors can compare paintings by examining their price histories alongside their:
 
-A title starts the artwork. Mathematics defines its destination. Human hands determine its path. An algorithm guides its evolution. A community gives it history.
+- Generative identity
+- Physical progress
+- Completion status
+- Contributors
+- Collective history
+- Ownership and provenance
+- Recorded market activity
 
-**The goal is not simply to generate an image. It is to build a system in which people collectively bring an image into existence.**
+A work may attract attention because of its visual qualities, its collective history, its completion progress, its recorded transactions, or the combination of these factors.
+
+A visitor might look for works with a long history, a particular contributor group, a high completion score, or a pattern of completed sales.
+
+Living Canvas provides the information needed to investigate those characteristics. It does not need to recommend that a visitor buy a particular work.
+
+### Interpreting Price Changes
+
+A rising price history can be interesting, but it does not by itself establish independent demand, liquidity, or future appreciation.
+
+Different kinds of price changes have different meanings:
+
+- A rising protocol price may reflect increasing measured progress.
+- A rising asking price reflects a seller's changing expectations.
+- Higher bids may indicate increased willingness to pay among auction participants.
+- Higher completed sale prices show that particular transactions occurred at those prices, subject to verification.
+
+A small number of transactions may not represent a broad market. Prices may also be affected by scarcity, social relationships, coordinated activity, or differences between individual works.
+
+Historical prices are evidence of recorded events, not guarantees of future returns.
+
+### Comparing Works
+
+Price-history graphs can help visitors compare the histories of multiple paintings.
+
+Comparisons are most meaningful when users can distinguish between:
+
+- Algorithmic prices and actual market transactions
+- Asking prices and completed sales
+- Recent events and older records
+- Verified data and participant-reported information
+- Different artwork versions and scoring protocols
+
+The objective is to support informed exploration rather than manufacture a single misleading impression of value.
+
+## 9. Market History as Provenance
+
+An artwork's history does not necessarily end when the painting is complete.
+
+Offers, auctions, ownership changes, and completed transactions can become part of its wider provenance, alongside its physical and generative history.
+
+Where reliable records are available, an artwork's metadata may include:
+
+- Listing and asking prices
+- Offers and their outcomes
+- Auction rules and opening prices
+- Recorded bids and winning bids
+- Whether a transaction was completed
+- Reported or verified sale prices
+- Ownership transfers
+- Transaction timestamps
+- Relevant disclosures about buyer-seller relationships
+- The artwork's progress score and protocol price at the time of a recorded event
+
+The record should distinguish clearly between an asking price, an offer, a winning bid, and a completed sale.
+
+It should also identify whether information is independently verified, supported by documentation, or reported by a participant.
+
+Corrections should be recorded transparently rather than silently overwriting previous events. Privacy-sensitive information should be handled separately from public provenance.
+
+A recorded sale establishes that a transaction occurred when adequately verified. It does not automatically establish independent demand, a fair market price, or a reliable prediction of future value.
+
+### Provenance as Part of the Artwork
+
+The artwork's history can become part of its perceived meaning.
+
+A painting may be associated with the people who created it, the groups that supported it, the places it has been, and the transactions through which it has changed hands.
+
+Living Canvas documents this history without assuming that every event increases the artwork's artistic or economic value.
+
+The record is intended to preserve context, not prescribe interpretation.
+
+## 10. The Social Life of Value
+
+Living Canvas is also an experiment in how value emerges from collective behavior.
+
+A group may believe that its work deserves greater recognition. Members may choose to buy, sell, exchange, or collect one another's paintings. These decisions can influence how later participants perceive the artwork and its history.
+
+Such behavior does not require the platform to direct or reward it. It can emerge from the incentives and relationships of the participants themselves.
+
+The resulting feedback loop is worth examining:
+
+1. A collective creates an artwork.
+2. Participants assign meaning and significance to it.
+3. Trading activity produces a history of prices and ownership.
+4. That history influences how others perceive the work.
+5. New participants make decisions based partly on the accumulated history.
+
+This process can generate genuine community, shared conviction, and cultural significance. It can also produce misleading signals when coordinated activity is mistaken for independent market demand.
+
+A transaction between two people can be genuine without demonstrating that a wider market shares their valuation. A recorded price is evidence of a particular exchange, not proof of universal desirability.
+
+Living Canvas treats this tension as part of the subject it explores, rather than assuming that a recorded price is an objective measure of artistic worth.
+
+The platform's responsibility is to describe its own measurements accurately and to distinguish documented facts from interpretation.
+
+## 11. Membership and Sustainability
+
+Living Canvas is designed around membership and participation rather than direct artwork sales.
+
+A subscription model can support the infrastructure needed for:
+
+- Generative image creation
+- Artwork registration and provenance
+- Collaboration tools
+- Image processing and progress measurement
+- Group management
+- Member portfolios
+- Artwork history and verification
+- Price-history graphs
+- Community features
+
+Additional features may be introduced as the project develops.
+
+Any future revenue from optional services should be clearly separated from artwork valuations and external transactions.
+
+Membership should support the platform without making trading volume or rising prices a requirement for participation.
+
+## 12. Transparency and Verification
+
+Trust depends on distinguishing what the system knows from what it merely records.
+
+Living Canvas should aim to make its technical and historical claims reproducible wherever practical.
+
+Core principles include:
+
+- Versioned generation and scoring algorithms
+- Reproducible target images
+- Timestamped layer records
+- Traceable progress measurements
+- Explicit protocol-price calculations
+- Clear distinctions between reported and verified market events
+- Transparent ownership and provenance updates
+- Accurate historical price graphs
+- Privacy-conscious treatment of participant information
+
+The platform should not present protocol prices as independent valuations or market histories as proof of future demand.
+
+Where price records are incomplete, the interface should make that limitation visible. Where a transaction cannot be verified, it should not be presented as independently verified.
+
+The platform's purpose is to preserve a useful record of the artwork and the events surrounding it.
+
+## 13. Technical Roadmap
+
+### Phase 1 — Generative Engine
+
+- Deterministic seed generation
+- Title-based artwork creation
+- Generator versioning
+- Target image storage and identification
+- Canvas aspect-ratio support
+
+### Phase 2 — Physical Painting Workflow
+
+- Canvas registration
+- Camera-based image capture
+- Perspective and color correction
+- Layer documentation
+- Initial progress-scoring system
+- Instructions for successive painting stages
+
+### Phase 3 — Collaborative Platform
+
+- User accounts and portfolios
+- Groups and shared artworks
+- Layer contribution records
+- Artwork completion workflow
+- Member profiles and collaboration history
+
+### Phase 4 — Provenance and Protocol Pricing
+
+- Published protocol-price formula
+- Versioned progress calculations
+- Timestamped artwork histories
+- Exportable artwork metadata
+- Auditable event records
+- Artwork identifiers
+
+### Phase 5 — Price History and External Market Data
+
+- Time-versus-euro price-history graphs
+- Separate visualization of protocol prices, asking prices, bids, and completed sales
+- Historical transaction records
+- Import or submission of market-history data
+- Verification and disclosure labels
+- Price-history comparisons between artworks
+- Links to external listings and marketplaces
+
+The platform can remain independent of the external marketplaces where participants choose to trade.
+
+## 14. Guiding Principle
+
+Living Canvas begins with a simple proposition:
+
+**An image can be generated by mathematics, realized through collective human effort, and given a social history through the people who gather around it.**
+
+The resulting artwork exists simultaneously as an image, a physical object, a collaborative achievement, and a record of human decisions.
+
+Its progress can be measured. Its creation can be documented. Its market history can be preserved and visualized.
+
+People can explore its history, compare it with other works, and decide for themselves whether it interests them artistically, socially, or economically.
+
+Living Canvas does not need to decide what art is worth.
+
+It creates a framework in which the creation, measurement, ownership, and social life of art can be observed.
